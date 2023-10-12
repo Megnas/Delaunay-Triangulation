@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <list>
+#include <ctime>
 
 #include "vector2.h"
 #include "pointGenerator.h"
