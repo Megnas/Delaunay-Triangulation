@@ -15,39 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src/main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="delaunayTriangulation.cpp">
+    <ClCompile Include="src/delaunayTriangulation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pointGenerator.cpp">
+    <ClCompile Include="src/pointGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vector2.cpp">
+    <ClCompile Include="src/vector2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="triangle.cpp">
+    <ClCompile Include="src/triangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="line2.cpp">
+    <ClCompile Include="src/line2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="delaunayTriangulation.h">
+    <ClInclude Include="src/delaunayTriangulation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pointGenerator.h">
+    <ClInclude Include="src/pointGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vector2.h">
+    <ClInclude Include="src/vector2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="triangle.h">
+    <ClInclude Include="src/triangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="line2.h">
+    <ClInclude Include="src/line2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,6 +2,7 @@ CC = g++
 CFLAGS = -std=c++23
 LIBS = -lSDL2
 BIN = bin/
+SRC = src/
 MODULES = main delaunayTriangulation line2 triangle vector2 pointGenerator
 OBJS = $(addprefix $(BIN), $(addsuffix .o, $(MODULES)))
 
@@ -15,7 +16,7 @@ all: $(BIN)triangulation
 $(BIN)triangulation: $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
 
-$(BIN)%.o: %.cpp
+$(BIN)%.o: $(SRC)%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@ $(LIBS)
 
 init:
