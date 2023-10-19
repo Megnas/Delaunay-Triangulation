@@ -100,13 +100,26 @@ int renderTriangulation(Vector2* points, unsigned numberOfPoints, float circleRa
 	{
 		while (SDL_PollEvent(&e) > 0)
 		{
-			if (e.window.event == SDL_WINDOWEVENT_CLOSE)
-				switch (e.type)
-				{
-				case SDL_QUIT:
-					keep_window_open = false;
-					break;
+			switch (e.type)
+			{
+			case SDL_QUIT:
+				keep_window_open = false;
+				break;
+			case SDL_WINDOWEVENT:
+				switch (e.window.event){
+				case SDL_WINDOWEVENT_CLOSE:
+						keep_window_open = false;
+						break;
 				}
+				break;
+			case SDL_KEYDOWN:
+				switch(e.key.keysym.sym){
+				case SDLK_ESCAPE:
+						keep_window_open = false;
+						break;
+				}
+				break;
+			}
 			//SDL_RenderPresent(renderer);
 		}
 
