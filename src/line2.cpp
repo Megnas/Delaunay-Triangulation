@@ -1,4 +1,4 @@
-#include "line2.h"
+#include "line2.hpp"
 
 Line2::Line2()
 {

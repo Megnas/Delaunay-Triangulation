@@ -1,4 +1,4 @@
-#include "pointGenerator.h"
+#include "pointGenerator.hpp"
 
 float randomFloat(float max)
 {

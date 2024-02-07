@@ -10,10 +10,10 @@
 #include <list>
 #include <ctime>
 
-#include "vector2.h"
-#include "pointGenerator.h"
-#include "triangle.h"
-#include "delaunayTriangulation.h"
+#include "vector2.hpp"
+#include "pointGenerator.hpp"
+#include "triangle.hpp"
+#include "delaunayTriangulation.hpp"
 
 using namespace std;
 

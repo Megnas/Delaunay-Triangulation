@@ -1,8 +1,8 @@
 #ifndef TRIANGLE_HEADER
 #define TRIANGLE_HEADER
 
-#include "vector2.h"
-#include "line2.h"
+#include "vector2.hpp"
+#include "line2.hpp"
 
 class Edge {
 public:

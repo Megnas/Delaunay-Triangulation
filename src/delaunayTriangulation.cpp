@@ -1,4 +1,4 @@
-#include "delaunayTriangulation.h"
+#include "delaunayTriangulation.hpp"
 
 #include "iostream"
 

@@ -1,29 +1,34 @@
 CC = g++
-CFLAGS = -std=c++23
+CFLAGS = -std=c++23 -fPIC
 LIBS = -lSDL2
 BIN = bin/
 SRC = src/
-MODULES = main delaunayTriangulation line2 triangle vector2 pointGenerator
+MODULES = main pointGenerator
+LIB_MODULES = delaunayTriangulation line2 triangle vector2
 OBJS = $(addprefix $(BIN), $(addsuffix .o, $(MODULES)))
+LIB_OBJS = $(addprefix $(BIN), $(addsuffix .o, $(LIB_MODULES)))
+DEPS=$(wildcard $(SRC)*.hpp)
 
-.PHONY: init clean run purge
+.PHONY: clean run lib
 
 run: all
-	./$(BIN)triangulation
+	LD_LIBRARY_PATH=$(BIN) ./$(BIN)triangulation
 
-all: $(BIN)triangulation
+all: lib $(BIN)triangulation
 
-$(BIN)triangulation: $(OBJS)
-	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
+lib: $(BIN)libmdt.so
 
-$(BIN)%.o: $(SRC)%.cpp
-	$(CC) $(CFLAGS) -c $< -o $@ $(LIBS)
+$(BIN)triangulation: $(OBJS) $(BIN)libmdt.so
+	$(CC) $(CFLAGS) $(OBJS) -o $@ $(LIBS) -Lbin -lmdt
 
-init:
-	mkdir bin
+$(BIN)%.o: $(SRC)%.cpp $(DEPS) | $(BIN)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(BIN)libmdt.so: $(LIB_OBJS)
+	$(CC) -shared $^ -o $@
+
+$(BIN):
+	mkdir $(BIN)
 
 clean:
-	rm -rf $(BIN)*.o $(BIN)triangulation
-
-purge: clean
 	rm -rf $(BIN)

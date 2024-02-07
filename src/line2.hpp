@@ -1,7 +1,7 @@
 #ifndef LINE2_HEADER
 #define LINE2_HEADER
 
-#include "vector2.h"
+#include "vector2.hpp"
 
 class Line2 {
 public:

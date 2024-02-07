@@ -3,8 +3,8 @@
 
 #include <list>
 #include <algorithm>
-#include "triangle.h"
-#include "vector2.h"
+#include "triangle.hpp"
+#include "vector2.hpp"
 
 std::list<TriangleC> triangulate(Vector2* points, unsigned numberOfPoints);
 

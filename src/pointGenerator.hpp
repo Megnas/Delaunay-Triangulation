@@ -1,7 +1,7 @@
 #ifndef POINT_GENERATOR_HEADER
 #define POINT_GENERATOR_HEADER
 
-#include "vector2.h"
+#include "vector2.hpp"
 
 #define M_PI 3.14159265358979323846f
 
